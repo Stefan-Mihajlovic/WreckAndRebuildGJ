@@ -11,7 +11,7 @@ public class WeaponHolder : MonoBehaviour
     private void Awake()
     {
         baseWeapon = new WeaponItem("Broomstick", 0, 0, false, true);
-        headWeapon = new WeaponItem("Rubber duck", 0, 0, false, false);
+        headWeapon = new WeaponItem("Car battery", 0, 0, false, false);
         weaponImages.UpdateImages();
     }
 
