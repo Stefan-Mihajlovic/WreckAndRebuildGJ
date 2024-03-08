@@ -10,6 +10,8 @@ public class WeaponHolder : MonoBehaviour
 
     private void Start()
     {
+        baseWeapon = Database.GetRandomBaseItem();
+        headWeapon = Database.GetRandomHeadItem();
         weaponImages.UpdateImages();
     }
 
