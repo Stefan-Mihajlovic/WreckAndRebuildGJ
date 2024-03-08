@@ -19,6 +19,9 @@ public class WeaponImages : MonoBehaviour
 
     public void UpdateImages()
     {
+        Debug.Log(baseItem);
+        Debug.Log(baseWeaponImages);
+
         switch (weaponHolder.baseWeapon.itemName)
         {
             case "Wood plank": baseItem.sprite = baseWeaponImages[0]; break;
