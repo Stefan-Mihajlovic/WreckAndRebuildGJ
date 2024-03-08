@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    [SerializeField] private WeaponHolder weaponHolder;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -20,6 +22,12 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             TakeDamage(20);
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            weaponHolder.baseWeapon = Database.GetRandomBaseItem();
+            weaponHolder.headWeapon = Database.GetRandomHeadItem();
+            weaponHolder.weaponImages.UpdateImages();
         }
     }
 

@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponItem
+[CreateAssetMenu(fileName = "New Weapon Item", menuName ="Assets/WeaponItem")]
+public class WeaponItem : ScriptableObject
 {
-    //is also used as id
+    public string itemID;
     public string itemName;
     //1 to 10
     public int speed;
@@ -13,6 +12,7 @@ public class WeaponItem
     public bool standalone;
     //false-head item, true-base item
     public bool isBase;
+    public Sprite sprite;
 
     public WeaponItem(string itemName, int speed, int damage, bool standalone, bool isBase)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponHolder : MonoBehaviour
 {
-    [SerializeField] private WeaponImages weaponImages;
+    [SerializeField] public WeaponImages weaponImages;
     public WeaponItem baseWeapon;
     public WeaponItem headWeapon;
 
