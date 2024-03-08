@@ -10,8 +10,6 @@ public class WeaponHolder : MonoBehaviour
 
     private void Start()
     {
-        baseWeapon = new WeaponItem("Broomstick", 0, 0, false, true);
-        headWeapon = new WeaponItem("Car battery", 0, 0, false, false);
         weaponImages.UpdateImages();
     }
 

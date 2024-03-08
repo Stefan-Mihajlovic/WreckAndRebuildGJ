@@ -13,23 +13,4 @@ public class WeaponItem : ScriptableObject
     //false-head item, true-base item
     public bool isBase;
     public Sprite sprite;
-
-    public WeaponItem(string itemName, int speed, int damage, bool standalone, bool isBase)
-    {
-        this.itemName = itemName;
-        this.speed = speed;
-        this.damage = damage;
-        this.standalone = standalone;
-        this.itemName = itemName;
-        this.isBase = isBase;
-    }
-    public WeaponItem(string itemName, int speed, int damage, bool standalone)
-    {
-        this.itemName = itemName;
-        this.speed = speed;
-        this.damage = damage;
-        this.standalone = standalone;
-        this.itemName = itemName;
-        this.isBase = true;
-    }
 }
