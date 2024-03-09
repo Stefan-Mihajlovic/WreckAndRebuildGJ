@@ -44,4 +44,17 @@ public class Player : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
     }
+
+    public void SetNewPlayerItem(WeaponItem newItem)
+    {
+        if(newItem.isBase)
+        {
+            weaponHolder.baseWeapon = newItem;
+        }
+        else
+        {
+            weaponHolder.headWeapon = newItem;
+        }
+        weaponHolder.weaponImages.UpdateImages();
+    }
 }

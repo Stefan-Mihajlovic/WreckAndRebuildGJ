@@ -19,6 +19,15 @@ public class PlayerMovement : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        if(moveHorizontal < 0)
+        {
+            this.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
     private void FixedUpdate()
     {
