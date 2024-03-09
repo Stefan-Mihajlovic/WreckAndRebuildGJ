@@ -6,6 +6,7 @@ public class PlayerPickUp : MonoBehaviour
 {
     private Player player;
     private Collider2D other = null;
+    [SerializeField] private GameObject itemDrop;
 
     private void Start()
     {
@@ -17,6 +18,15 @@ public class PlayerPickUp : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) && other != null)
         {
             WeaponItem newItem = other.transform.GetComponent<LayingWeaponItem>().item;
+            GameObject oldItem = Instantiate(itemDrop, transform.position, new Quaternion());
+            if (newItem.isBase) 
+            {
+                oldItem.GetComponent<LayingWeaponItem>().item = player.weaponHolder.baseWeapon;
+            }
+            else
+            {
+                oldItem.GetComponent<LayingWeaponItem>().item = player.weaponHolder.headWeapon;
+            }
             player.SetNewPlayerItem(newItem);
             Destroy(other.gameObject);
         }

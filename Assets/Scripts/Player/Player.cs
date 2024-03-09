@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
-    [SerializeField] private WeaponHolder weaponHolder;
+    [SerializeField] public WeaponHolder weaponHolder;
 
     private void Start()
     {
