@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
             weaponHolder.baseWeapon = Database.GetRandomBaseItem();
             weaponHolder.headWeapon = Database.GetRandomHeadItem();
             weaponHolder.weaponImages.UpdateImages();
+            weaponHolder.UpdateWeapon();
         }
     }
 
@@ -56,5 +57,6 @@ public class Player : MonoBehaviour
             weaponHolder.headWeapon = newItem;
         }
         weaponHolder.weaponImages.UpdateImages();
+        weaponHolder.UpdateWeapon();
     }
 }

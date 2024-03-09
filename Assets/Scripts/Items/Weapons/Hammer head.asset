@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc75f99f15e0c5946be9b60ee90b63e5, type: 3}
-  m_Name: Hammer
+  m_Name: Hammer head
   m_EditorClassIdentifier: 
-  itemID: hammer
-  itemName: Hammer
+  itemID: hammerhead
+  itemName: Hammer head
   speed: -3
   damage: 40
   standalone: 0
   isBase: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: dec52804bc57be346b3586e7dd0a8b6a, type: 3}

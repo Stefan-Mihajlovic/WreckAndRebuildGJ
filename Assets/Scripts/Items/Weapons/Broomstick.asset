@@ -17,5 +17,5 @@ MonoBehaviour:
   speed: 7
   damage: 30
   standalone: 0
-  isBase: 0
-  sprite: {fileID: 0}
+  isBase: 1
+  sprite: {fileID: 21300000, guid: f0ddb24bf01f65744aa616741b3d7101, type: 3}

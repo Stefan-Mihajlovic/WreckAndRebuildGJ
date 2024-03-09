@@ -21,4 +21,5 @@ public class LayingWeaponItem : MonoBehaviour
         }
         UpdateSprite();
     }
+
 }
