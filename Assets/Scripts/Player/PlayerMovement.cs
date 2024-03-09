@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float moveVertical;
     [SerializeField]
     float movementSpeed = 5;
+    private bool isFacingRight = true;
 
 
     private void Start()
@@ -20,17 +21,22 @@ public class PlayerMovement : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
 
-        if(moveHorizontal < 0)
-        {
-            this.transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else
-        {
-            this.transform.localScale = new Vector3(1, 1, 1);
-        }
+        Flip();
     }
+
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveHorizontal, moveVertical).normalized * movementSpeed;
+    }
+
+    private void Flip()
+    {
+        if(isFacingRight && moveHorizontal < 0f || !isFacingRight && moveHorizontal > 0f) 
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
+        }
     }
 }
