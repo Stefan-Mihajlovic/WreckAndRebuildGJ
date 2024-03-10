@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Broomstick
   speed: 7
   damage: 30
-  standalone: 0
+  isStandalone: 0
   isBase: 1
   sprite: {fileID: 21300000, guid: f0ddb24bf01f65744aa616741b3d7101, type: 3}
+  animator: {fileID: 22100000, guid: 6212e8097d84372498dc1b9c02104efb, type: 2}

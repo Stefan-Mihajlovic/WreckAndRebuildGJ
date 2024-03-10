@@ -19,3 +19,4 @@ MonoBehaviour:
   isStandalone: 0
   isBase: 0
   sprite: {fileID: 0}
+  animator: {fileID: 22100000, guid: d1f6dca8b9cb40a489e6b62947ed4aa6, type: 2}
