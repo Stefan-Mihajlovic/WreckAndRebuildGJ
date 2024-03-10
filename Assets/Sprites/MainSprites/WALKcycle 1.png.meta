@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 412f35d2c189a604eb355a715b97d77c
+guid: 1a9d20567cc294943945125678c4a36e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WALKcycle_0
+      name: WALKcycle 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b836afa3e49c641b3498bf0ac2ee1f
-      internalID: -656272399
+      spriteID: 82508bf7ce4817b44b175309c30a2962
+      internalID: 1733717660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKcycle_1
+      name: WALKcycle 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ebacc360f0bf84bb7e278e2f7f9968
-      internalID: 1801887527
+      spriteID: bc23e3cc11672034ca4102c98dceb8bd
+      internalID: -1052474310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKcycle_2
+      name: WALKcycle 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9539fbf302126a4986ca4b7af44d040
-      internalID: -1381084712
+      spriteID: 501e289e79e72f04db4a4e4b2d85d9d2
+      internalID: -1429143595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKcycle_3
+      name: WALKcycle 1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85992d803329f7543a591fbfcd0f4953
-      internalID: 1907779360
+      spriteID: f6aff3f08bd12e24984fb03716cf1aa1
+      internalID: 1205890751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WALKcycle_4
+      name: WALKcycle 1_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529f2909b3da3894badc96e5d0d9168d
-      internalID: 1382098536
+      spriteID: 11016976b3778a444b718c39490af2a3
+      internalID: 52776518
       vertices: []
       indices: 
       edges: []
@@ -220,11 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WALKcycle_2: -1381084712
-      WALKcycle_0: -656272399
-      WALKcycle_3: 1907779360
-      WALKcycle_4: 1382098536
-      WALKcycle_1: 1801887527
+      WALKcycle 1_2: -1429143595
+      WALKcycle 1_0: 1733717660
+      WALKcycle 1_3: 1205890751
+      WALKcycle 1_1: -1052474310
+      WALKcycle 1_4: 52776518
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
