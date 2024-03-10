@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
         moveVertical = Input.GetAxisRaw("Vertical");
 
         Flip();
+        if(moveHorizontal > 0f)
+        {
+
+        }
     }
 
     private void FixedUpdate()
