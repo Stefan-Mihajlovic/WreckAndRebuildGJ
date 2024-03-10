@@ -73,6 +73,11 @@ public class PlayerPickUp : MonoBehaviour
             collision.transform.Find("UseButtonGfx").gameObject.SetActive(true);
             other = collision;
         }
+        if(collision.tag == "Heal")
+        {
+            player.Heal(30);
+            Destroy(collision.gameObject);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
