@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
         if(currentHealth > maxHealth) 
         {
             currentHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
         }
+        healthBar.SetHealth(currentHealth);
     }
 
     public void SetNewPlayerItem(WeaponItem newItem)
