@@ -41,6 +41,14 @@ public class PlayerPickUp : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Weapon")
+        {
+            other = collision;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Weapon")
