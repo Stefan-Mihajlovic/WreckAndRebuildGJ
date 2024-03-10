@@ -25,14 +25,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
 
         healthBar.SetHealth(currentHealth);
     }
 
-    private void Heal(int amount)
+    public void Heal(int amount)
     {
         currentHealth += amount;
 
