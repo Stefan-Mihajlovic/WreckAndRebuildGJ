@@ -9,12 +9,15 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    private Animator animator;
+
     [SerializeField] public WeaponHolder weaponHolder;
 
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        animator = gameObject.GetComponent<Animator>();
     }
 
     private void Update()
@@ -48,6 +51,7 @@ public class Player : MonoBehaviour
         if(newItem.isBase)
         {
             weaponHolder.baseWeapon = newItem;
+            animator.runtimeAnimatorController = newItem.animator;
         }
         else
         {

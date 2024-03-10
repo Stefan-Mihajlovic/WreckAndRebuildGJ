@@ -13,4 +13,5 @@ public class WeaponItem : ScriptableObject
     //false-head item, true-base item
     public bool isBase;
     public Sprite sprite;
+    public RuntimeAnimatorController animator;
 }
