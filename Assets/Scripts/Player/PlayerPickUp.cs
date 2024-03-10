@@ -20,6 +20,7 @@ public class PlayerPickUp : MonoBehaviour
         if (newItem.isBase)
         {
             oldItem.GetComponent<LayingWeaponItem>().item = player.weaponHolder.baseWeapon;
+            oldItem.transform.position += new Vector3(0.1f, 0, 0);
             //if (newItem.isStandalone)
             //{
             //    GameObject oldItemHead = Instantiate(itemDrop, transform.position + new Vector3(0.5f,0,0), new Quaternion());
