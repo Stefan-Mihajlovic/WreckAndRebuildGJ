@@ -16,6 +16,6 @@ MonoBehaviour:
   itemName: Wrench
   speed: 4
   damage: 25
-  standalone: 1
+  isStandalone: 1
   isBase: 1
   sprite: {fileID: 21300000, guid: 4dba2d93b4391904a9a0097de0c55417, type: 3}

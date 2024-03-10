@@ -25,13 +25,16 @@ public class Database : MonoBehaviour
         headItems = new List<WeaponItem>();
         foreach (WeaponItem item in instance.items.allItems)
         {
-            if (item.isBase == true)
+            if (item.itemID != "none")
             {
-                instance.baseItems.Add(item);
-            }
-            else
-            {
-                instance.headItems.Add(item);
+                if (item.isBase == true)
+                {
+                    instance.baseItems.Add(item);
+                }
+                else
+                {
+                    instance.headItems.Add(item);
+                }
             }
         }
     }
@@ -48,7 +51,7 @@ public class Database : MonoBehaviour
     }
     public static WeaponItem GetRandomItem()
     {
-        return instance.items.allItems[Random.Range(0, instance.items.allItems.Count)];
+        return instance.items.allItems[Random.Range(1, instance.items.allItems.Count)];
     }
     public static WeaponItem GetRandomBaseItem()
     {

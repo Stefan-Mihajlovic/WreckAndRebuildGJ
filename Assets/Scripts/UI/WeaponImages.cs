@@ -19,7 +19,23 @@ public class WeaponImages : MonoBehaviour
 
     public void UpdateImages()
     {
-        baseItem.sprite = weaponHolder.baseWeapon.sprite;
-        headItem.sprite = weaponHolder.headWeapon.sprite;
+        baseItem.enabled = true;
+        headItem.enabled = true;
+        if (weaponHolder.headWeapon.itemID == "none")
+        {
+            headItem.enabled = false;
+        }
+        else
+        {
+            headItem.sprite = weaponHolder.headWeapon.sprite;
+        }
+        if (weaponHolder.baseWeapon.itemID == "none")
+        {
+            baseItem.enabled = false;
+        }
+        else
+        {
+            baseItem.sprite = weaponHolder.baseWeapon.sprite;
+        }
     }
 }

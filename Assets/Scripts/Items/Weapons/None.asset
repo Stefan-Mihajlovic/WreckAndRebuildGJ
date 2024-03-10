@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc75f99f15e0c5946be9b60ee90b63e5, type: 3}
-  m_Name: Power drill
+  m_Name: None
   m_EditorClassIdentifier: 
-  itemID: power drill
-  itemName: Power Drill
-  speed: 10
-  damage: 15
-  isStandalone: 1
-  isBase: 1
-  sprite: {fileID: 21300000, guid: 7cf80834e8f94704f87319bf31bf4c65, type: 3}
+  itemID: none
+  itemName: 
+  speed: 0
+  damage: 0
+  isStandalone: 0
+  isBase: 0
+  sprite: {fileID: 0}

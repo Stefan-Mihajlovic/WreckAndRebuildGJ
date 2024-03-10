@@ -23,13 +23,6 @@ public class Player : MonoBehaviour
         {
             TakeDamage(20);
         }
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            weaponHolder.baseWeapon = Database.GetRandomBaseItem();
-            weaponHolder.headWeapon = Database.GetRandomHeadItem();
-            weaponHolder.weaponImages.UpdateImages();
-            weaponHolder.UpdateWeapon();
-        }
     }
 
     private void TakeDamage(int amount)

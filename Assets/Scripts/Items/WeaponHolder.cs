@@ -35,12 +35,35 @@ public class WeaponHolder : MonoBehaviour
 
     public void UpdateWeapon()
     {
-        baseHolder.GetComponent<SpriteRenderer>().sprite = baseWeapon.sprite;
-        headHolder.GetComponent<SpriteRenderer>().sprite = headWeapon.sprite;
-        headHolder.position = baseHolder.position +
-            new Vector3(
-                baseHolder.GetComponent<SpriteRenderer>().bounds.size.x / 2 * transform.parent.localScale.x,
-            baseHolder.GetComponent<SpriteRenderer>().bounds.size.y / 2,
-            baseHolder.position.z);
+        baseHolder.GetComponent<SpriteRenderer>().enabled = true;
+        headHolder.GetComponent<SpriteRenderer>().enabled = true;
+        if (headWeapon.itemID == "none")
+        {
+            headHolder.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+        {
+            headHolder.GetComponent<SpriteRenderer>().sprite = headWeapon.sprite; 
+            headHolder.position = baseHolder.position +
+             new Vector3(
+                 baseHolder.GetComponent<SpriteRenderer>().bounds.size.x / 2 * transform.parent.localScale.x,
+             baseHolder.GetComponent<SpriteRenderer>().bounds.size.y / 2,
+             baseHolder.position.z);
+        }
+        if (baseWeapon.itemID == "none")
+        {
+            baseHolder.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else
+        {
+            baseHolder.GetComponent<SpriteRenderer>().sprite = baseWeapon.sprite;
+        }
+        //baseHolder.GetComponent<SpriteRenderer>().sprite = baseWeapon.sprite;
+        //headHolder.GetComponent<SpriteRenderer>().sprite = headWeapon.sprite;
+        //headHolder.position = baseHolder.position +
+        //    new Vector3(
+        //        baseHolder.GetComponent<SpriteRenderer>().bounds.size.x / 2 * transform.parent.localScale.x,
+        //    baseHolder.GetComponent<SpriteRenderer>().bounds.size.y / 2,
+        //    baseHolder.position.z);
     }
 }

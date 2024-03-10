@@ -9,7 +9,7 @@ public class WeaponItem : ScriptableObject
     public int speed;
     public int damage;
     //is only used without an aditional item
-    public bool standalone;
+    public bool isStandalone;
     //false-head item, true-base item
     public bool isBase;
     public Sprite sprite;
