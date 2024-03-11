@@ -21,21 +21,7 @@ public class patrolneSape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) < 5)
-        {
-            rb.velocity = (player.transform.position - transform.position).normalized * speed;
-        }
-        else
-        {
-            if (transform.position.x >= tackaB.transform.position.x)
-            {
-                rb.velocity = new Vector2(-speed, 0);
-            }
-            if (transform.position.x <= tackaA.transform.position.x)
-            {
-                rb.velocity = new Vector2(speed, 0);
-            }
-        }
+       
         
 
 
