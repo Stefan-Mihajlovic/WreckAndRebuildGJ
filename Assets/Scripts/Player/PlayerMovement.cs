@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float movementSpeed = 5;
     private bool isFacingRight = true;
+    Player player;
 
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        player = gameObject.GetComponent<Player>();
     }
     private void Update()
     {
@@ -25,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
         if(moveHorizontal > 0f)
         {
 
+        }
+        if (moveHorizontal + moveVertical != 0)
+        {
+            player.animator.SetBool("Running", true);
+        }
+        else
+        {
+            player.animator.SetBool("Running", false);
         }
     }
 

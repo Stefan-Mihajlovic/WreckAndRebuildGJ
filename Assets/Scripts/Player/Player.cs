@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
-    private Animator animator;
+    public Animator animator;
 
     [SerializeField] public WeaponHolder weaponHolder;
 
