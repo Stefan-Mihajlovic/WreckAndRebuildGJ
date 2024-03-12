@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 579545850208959299}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  animator: {fileID: 0}
   weaponHolder: {fileID: 2839656881350999021}
 --- !u!95 &579545850208959299
 Animator:
