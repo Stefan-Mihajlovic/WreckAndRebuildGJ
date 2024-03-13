@@ -10,12 +10,8 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
     [SerializeField] private HealthBar healthBar;
     private Transform player;
-    private Vector3 currentGoal;
-    private bool reachedGoal = false;
-    [SerializeField] private float reachedGoalDistance;
-    [SerializeField] private float playerDetectionRadius;
-    [SerializeField] private float attackRange;
-
+    public Vector3 currentGoal;
+    private PlayerSensor playerSensor;
 
     public enum State 
     {
@@ -30,6 +26,7 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerSensor = GetComponentInChildren<PlayerSensor>();
     }
 
     private void Update()
@@ -41,7 +38,7 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        StateUpdate();
+        playerSensor.StateUpdate();
         TakeAction();
     }
 
@@ -59,30 +56,6 @@ public class Enemy : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    private void StateUpdate()
-    {
-        if (Vector2.Distance(transform.position, player.position) <= attackRange)
-        {
-            state = State.Attacking;
-        }
-        else
-        {
-            RaycastHit2D ray = Physics2D.Raycast(transform.position, player.position - transform.position);
-            if (Vector2.Distance(transform.position, player.position) <= playerDetectionRadius && ray.collider.CompareTag("Player"))
-            {
-                currentGoal = player.position;
-                state = State.Chasing;
-            }
-            else
-            {
-                reachedGoal = Vector2.Distance(transform.position, currentGoal) <= reachedGoalDistance;
-                if (reachedGoal)
-                {
-                    state = State.Idle;
-                }
-            }
-        }
-    }
 
     private void TakeAction()
     {
@@ -109,11 +82,4 @@ public class Enemy : MonoBehaviour
         Debug.Log("Attacking");
     }
 
-    private void OnDrawGizmos()
-    {
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position,Vector3.forward, playerDetectionRadius);
-        Handles.DrawWireDisc(transform.position, Vector3.forward, attackRange);
-        Handles.DrawWireDisc(transform.position, Vector3.forward, reachedGoalDistance);
-    }
 }

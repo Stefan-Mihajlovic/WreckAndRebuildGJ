@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 774788881}
   - component: {fileID: 774788882}
   - component: {fileID: 774788883}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: PickUpCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
