@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        player = GameObject.FindGameObjectWithTag("player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         StateUpdate();
+        TakeAction();
     }
 
     private void TakeDamage(int amount)
