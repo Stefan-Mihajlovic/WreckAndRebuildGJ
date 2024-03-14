@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private float movementSpeed;
     private Transform player;
+    private Rigidbody2D rb;
     public Vector3 currentGoal;
     private PlayerSensor playerSensor;
 
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerSensor = GetComponentInChildren<PlayerSensor>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -62,6 +65,7 @@ public class Enemy : MonoBehaviour
         switch (state)
         {
             case State.Idle:
+                rb.velocity = new Vector3(0, 0, 0);
                 Debug.Log("Idle");
                 break;
             case State.Chasing:
@@ -76,10 +80,17 @@ public class Enemy : MonoBehaviour
     private void Chase()
     {
         Debug.Log("Chasing");
+        rb.velocity = (currentGoal - transform.position).normalized * movementSpeed;
     }
     private void Attack()
     {
         Debug.Log("Attacking");
+        rb.velocity = new Vector3(0,0,0);
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawSphere(currentGoal,0.3f);
+    }
 }

@@ -31,7 +31,6 @@ public class PlayerSensor : MonoBehaviour
         {
             RaycastHit2D ray = Physics2D.Raycast(transform.position, player.position - transform.position,Mathf.Infinity, scanMask);
             Debug.DrawRay(transform.position, player.transform.position - transform.position);
-            Debug.Log(ray.collider);
             if (Vector2.Distance(transform.position, player.position) <= playerDetectionRadius && ray.collider.CompareTag("Player"))
             {
                 enemy.currentGoal = player.position;
