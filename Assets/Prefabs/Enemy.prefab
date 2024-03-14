@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9149475369418776097}
   - component: {fileID: 7887759253594152297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerSensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   attackRange: 1
   scanMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 520
 --- !u!1 &3701757582825990743
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3701757582825990742}
   - component: {fileID: 3701757582825990741}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3701757583812081203}
   - component: {fileID: 3701757583812081201}
   - component: {fileID: 3701757583812081202}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 3701757583992955223}
   - component: {fileID: 3701757583992955208}
   - component: {fileID: 3701757583992955209}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 3701757584127034007}
   - component: {fileID: 3701757584127034005}
   - component: {fileID: 3701757584127034006}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 3701757584195631294}
   - component: {fileID: 3701757584195631292}
   - component: {fileID: 3701757584195631293}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 3701757584266356341}
   - component: {fileID: 8423686997194687347}
   - component: {fileID: 3385376614140730535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 3701757584127034006}
-  movementSpeed: 3
+  movementSpeed: 2.5
   currentGoal: {x: 0, y: 0, z: 0}
   state: 0
 --- !u!61 &8423686997194687347

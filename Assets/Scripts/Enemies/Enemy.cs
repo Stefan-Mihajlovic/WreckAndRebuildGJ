@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerSensor = GetComponentInChildren<PlayerSensor>();
         rb = GetComponent<Rigidbody2D>();
+        currentGoal = transform.position;
     }
 
     private void Update()
@@ -79,8 +80,9 @@ public class Enemy : MonoBehaviour
 
     private void Chase()
     {
-        Debug.Log("Chasing");
-        rb.velocity = (currentGoal - transform.position).normalized * movementSpeed;
+        Vector2 distance = (currentGoal - transform.position).normalized;
+        rb.velocity = distance * movementSpeed;
+        Debug.Log("Chasing" + rb.velocity.magnitude);
     }
     private void Attack()
     {
