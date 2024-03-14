@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     public Vector3 currentGoal;
     private PlayerSensor playerSensor;
+    private EnemyAttack enemyAttack;
 
     public enum State 
     {
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
         playerSensor = GetComponentInChildren<PlayerSensor>();
         rb = GetComponent<Rigidbody2D>();
         currentGoal = transform.position;
+        enemyAttack = GetComponent<EnemyAttack>();
     }
 
     private void Update()
@@ -88,6 +90,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Attacking");
         rb.velocity = new Vector3(0,0,0);
+        enemyAttack.AttackOrCooldown();
     }
 
     private void OnDrawGizmos()

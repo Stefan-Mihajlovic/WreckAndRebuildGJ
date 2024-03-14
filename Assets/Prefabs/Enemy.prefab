@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 3701757584266356341}
   - component: {fileID: 8423686997194687347}
   - component: {fileID: 3385376614140730535}
+  - component: {fileID: 1808782919229594353}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -593,3 +594,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1808782919229594353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701757584266356342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86aee63cbffc2bf4ba73a6fb83f872ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
+  attackDuration: 0.5
