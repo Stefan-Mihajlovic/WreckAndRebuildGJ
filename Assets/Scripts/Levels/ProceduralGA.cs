@@ -13,19 +13,17 @@ public static class ProceduralGA
 
         for (int i = 0; i < walkLength; i++)
         {
-            var newPosition = previousPosition + Direction2D.getRandomCardinalDirection();
+            var newPosition = previousPosition + Direction2D.GetRandomCardinalDirection();
             path.Add(newPosition);
             previousPosition = newPosition;
         }
-
         return path;
     }
 
     public static List<Vector2Int> RandomWalkCorridor(Vector2Int startPosition, int corridorLength)
     {
         List<Vector2Int> corridor = new List<Vector2Int>();
-        var direction = Direction2D.getRandomCardinalDirection();
-    
+        var direction = Direction2D.GetRandomCardinalDirection();
         var currentPosition = startPosition;
         corridor.Add(currentPosition);
 
@@ -34,7 +32,6 @@ public static class ProceduralGA
             currentPosition += direction;
             corridor.Add(currentPosition);
         }
-
         return corridor;
     }
 
@@ -46,9 +43,9 @@ public static class ProceduralGA
         while (roomsQueue.Count > 0)
         {
             var room = roomsQueue.Dequeue();
-            if(room.size.y >= minHeight && room.size.x >= minWidth)
+            if (room.size.y >= minHeight && room.size.x >= minWidth)
             {
-                if(Random.value < 0.5f)
+                if (Random.value < 0.5f)
                 {
                     if (room.size.y >= minHeight * 2)
                     {
@@ -58,14 +55,14 @@ public static class ProceduralGA
                     {
                         SplitVertically(minWidth, roomsQueue, room);
                     }
-                    else
+                    else if (room.size.x >= minWidth && room.size.y >= minHeight)
                     {
                         roomsList.Add(room);
                     }
                 }
                 else
                 {
-                    if(room.size.x >= minWidth * 2)
+                    if (room.size.x >= minWidth * 2)
                     {
                         SplitVertically(minWidth, roomsQueue, room);
                     }
@@ -73,14 +70,13 @@ public static class ProceduralGA
                     {
                         SplitHorizontally(minHeight, roomsQueue, room);
                     }
-                    else
+                    else if (room.size.x >= minWidth && room.size.y >= minHeight)
                     {
                         roomsList.Add(room);
                     }
                 }
             }
         }
-
         return roomsList;
     }
 
@@ -96,7 +92,7 @@ public static class ProceduralGA
 
     private static void SplitHorizontally(int minHeight, Queue<BoundsInt> roomsQueue, BoundsInt room)
     {
-        var ySplit = Random.Range(1, room.size.y); // Grid like structure (minHeight, room.size.y - minHeight)
+        var ySplit = Random.Range(1, room.size.y);
         BoundsInt room1 = new BoundsInt(room.min, new Vector3Int(room.size.x, ySplit, room.size.z));
         BoundsInt room2 = new BoundsInt(new Vector3Int(room.min.x, room.min.y + ySplit, room.min.z),
             new Vector3Int(room.size.x, room.size.y - ySplit, room.size.z));
@@ -109,14 +105,35 @@ public static class Direction2D
 {
     public static List<Vector2Int> cardinalDirectionsList = new List<Vector2Int>
     {
-        new Vector2Int(0, 1), // Up
-        new Vector2Int(1, 0), // Right
-        new Vector2Int(0, -1), // Down
-        new Vector2Int(-1, 0) // Left
+        new Vector2Int(0,1), //UP
+        new Vector2Int(1,0), //RIGHT
+        new Vector2Int(0, -1), // DOWN
+        new Vector2Int(-1, 0) //LEFT
     };
 
-    public static Vector2Int getRandomCardinalDirection()
+    public static List<Vector2Int> diagonalDirectionsList = new List<Vector2Int>
     {
-        return cardinalDirectionsList[Random.Range(0, cardinalDirectionsList.Count)];
+        new Vector2Int(1,1), //UP-RIGHT
+        new Vector2Int(1,-1), //RIGHT-DOWN
+        new Vector2Int(-1, -1), // DOWN-LEFT
+        new Vector2Int(-1, 1) //LEFT-UP
+    };
+
+    public static List<Vector2Int> eightDirectionsList = new List<Vector2Int>
+    {
+        new Vector2Int(0,1), //UP
+        new Vector2Int(1,1), //UP-RIGHT
+        new Vector2Int(1,0), //RIGHT
+        new Vector2Int(1,-1), //RIGHT-DOWN
+        new Vector2Int(0, -1), // DOWN
+        new Vector2Int(-1, -1), // DOWN-LEFT
+        new Vector2Int(-1, 0), //LEFT
+        new Vector2Int(-1, 1) //LEFT-UP
+
+    };
+
+    public static Vector2Int GetRandomCardinalDirection()
+    {
+        return cardinalDirectionsList[UnityEngine.Random.Range(0, cardinalDirectionsList.Count)];
     }
 }
