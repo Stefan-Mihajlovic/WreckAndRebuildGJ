@@ -8,7 +8,7 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private float meleeSpeed;
     [SerializeField] private float damage;
 
-    float timer;
+    float timer; 
     void Update()
     {
         if (timer <= 0f)
