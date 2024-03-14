@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Sawblade
   speed: 0
   damage: 20
-  standalone: 0
+  isStandalone: 0
   isBase: 0
-  sprite: {fileID: 21300000, guid: f2a996316d2b72f4c9a57523aaa1a020, type: 3}
+  sprite: {fileID: 21300000, guid: 848c9f0031c791841b34637c654d635a, type: 3}
+  animator: {fileID: 0}

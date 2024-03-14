@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Car battery
   speed: 1
   damage: 35
-  standalone: 0
+  isStandalone: 0
   isBase: 0
-  sprite: {fileID: 21300000, guid: ac5b53a263cea11408b237e68abef8d3, type: 3}
+  sprite: {fileID: 21300000, guid: 3bbd096b5891c7c448ea44e0519408fa, type: 3}
+  animator: {fileID: 0}
