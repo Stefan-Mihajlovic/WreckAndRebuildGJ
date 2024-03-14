@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 504580238}
   - component: {fileID: 504580237}
   - component: {fileID: 504580236}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11324,6 +11324,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3385376614140730535, guid: c4d6ff2655d192a4687862d2449200ae, type: 3}
+      propertyPath: m_AngularDrag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3701757584195631294, guid: c4d6ff2655d192a4687862d2449200ae, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11342,7 +11346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3701757584266356340, guid: c4d6ff2655d192a4687862d2449200ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7261767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3701757584266356340, guid: c4d6ff2655d192a4687862d2449200ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11468,7 +11472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8576199333176534354, guid: 9d5235d55526f8c4e82034238a718f00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0033444525
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8576199333176534354, guid: 9d5235d55526f8c4e82034238a718f00, type: 3}
       propertyPath: m_LocalRotation.w
