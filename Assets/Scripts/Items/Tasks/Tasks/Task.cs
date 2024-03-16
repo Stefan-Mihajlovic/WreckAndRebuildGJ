@@ -8,5 +8,7 @@ public class Task : ScriptableObject
     public string taskTitle;
     public string taskDescription;
 
+    public bool isCompleted;
+
     public TaskItem taskItemToCollect;
 }

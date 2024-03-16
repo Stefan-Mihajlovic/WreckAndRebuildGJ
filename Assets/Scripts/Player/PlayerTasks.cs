@@ -23,6 +23,7 @@ public class PlayerTasks : MonoBehaviour
             {
                 if (task.taskItemToCollect.taskItemPrefab.name == collision.gameObject.name)
                 {
+                    task.isCompleted = true;
                     taskToRemoveDesc = task.taskDescription;
                     Destroy(collision.gameObject);
                 }
@@ -34,6 +35,16 @@ public class PlayerTasks : MonoBehaviour
                     TMPText.GetComponentInChildren<Image>().sprite = checkSprite;
                     TMPText.color = Color.green;
                 }
+            }
+            int br = 0;
+            foreach (var task in currentTasks)
+            {
+                if (task.isCompleted)
+                    br++;
+            }
+            if(br > 2)
+            {
+                Debug.Log("You collected everything, you filthy fuck");
             }
         }
     }
