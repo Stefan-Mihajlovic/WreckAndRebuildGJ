@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
 
     public Animator animator;
+    public PlayerAttack playerAttack;
 
 
 
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         animator = gameObject.GetComponent<Animator>();
+        playerAttack = GetComponent<PlayerAttack>();
     }
 
     private void Update()
@@ -27,6 +29,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             TakeDamage(20);
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            playerAttack.Attack();
         }
     }
 
@@ -61,5 +67,7 @@ public class Player : MonoBehaviour
         }
         weaponHolder.weaponImages.UpdateImages();
         weaponHolder.UpdateWeapon();
+        playerAttack.attackDuration = 5f / (weaponHolder.baseWeapon.speed + weaponHolder.headWeapon.speed);
+        Debug.Log(playerAttack.attackDuration);
     }
 }
