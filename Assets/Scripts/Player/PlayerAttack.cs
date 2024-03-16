@@ -9,6 +9,11 @@ public class PlayerAttack : MonoBehaviour
     private float currentAttackTime;
     private bool isAttacking = false;
 
+    private void Start()
+    {
+        player = GetComponent<Player>();
+    }
+
     private void Update()
     {
         if (isAttacking)
@@ -27,7 +32,8 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
-            currentAttackTime = attackDuration; 
+            currentAttackTime = attackDuration;
+            player.animator.SetTrigger("Attack");
         }
     }
 }
