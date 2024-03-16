@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deea85d3e9b73b449a23868cf8b77572, type: 3}
+  m_Name: Task_Google
+  m_EditorClassIdentifier: 
+  taskID: 1
+  taskTitle: Google
+  taskDescription: Collect the google icon
+  taskItemToCollect: {fileID: 11400000, guid: 47426c714c3ecaa429c4c98c3479ea8a, type: 2}

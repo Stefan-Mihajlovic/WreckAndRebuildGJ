@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Heal
   - Weapon
+  - TaskItem
   layers:
   - Default
   - TransparentFX

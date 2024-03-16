@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
     public Animator animator;
     public PlayerAttack playerAttack;
 
-
-
     [SerializeField] public WeaponHolder weaponHolder;
 
     private void Start()
