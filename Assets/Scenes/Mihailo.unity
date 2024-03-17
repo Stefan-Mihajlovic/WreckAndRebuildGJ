@@ -11237,6 +11237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: {fileID: 11400000, guid: 7a4044dc57fc893418dd1a178650a8ff, type: 2}
+  tasks: {fileID: 0}
+  currentTasks: []
+  taskTextsUI: []
 --- !u!4 &2091937147
 Transform:
   m_ObjectHideFlags: 0

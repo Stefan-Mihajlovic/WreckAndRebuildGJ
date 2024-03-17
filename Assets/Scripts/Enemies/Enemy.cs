@@ -37,10 +37,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    TakeDamage(20);
+        //}
     }
     private void FixedUpdate()
     {
@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         TakeAction();
     }
 
-    private void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         currentHealth -= amount;
 
@@ -69,7 +69,6 @@ public class Enemy : MonoBehaviour
         {
             case State.Idle:
                 rb.velocity = new Vector3(0, 0, 0);
-                Debug.Log("Idle");
                 break;
             case State.Chasing:
                 Chase();
@@ -84,11 +83,9 @@ public class Enemy : MonoBehaviour
     {
         Vector2 distance = (currentGoal - transform.position).normalized;
         rb.velocity = distance * movementSpeed;
-        Debug.Log("Chasing" + rb.velocity.magnitude);
     }
     private void Attack()
     {
-        Debug.Log("Attacking");
         rb.velocity = new Vector3(0,0,0);
         enemyAttack.AttackOrCooldown();
     }

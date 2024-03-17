@@ -66,6 +66,5 @@ public class Player : MonoBehaviour
         weaponHolder.weaponImages.UpdateImages();
         weaponHolder.UpdateWeapon();
         playerAttack.attackDuration = 5f / (weaponHolder.baseWeapon.speed + weaponHolder.headWeapon.speed);
-        Debug.Log(playerAttack.attackDuration);
     }
 }
