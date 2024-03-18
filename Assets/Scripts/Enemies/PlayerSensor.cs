@@ -23,6 +23,8 @@ public class PlayerSensor : MonoBehaviour
     }
     public void StateUpdate()
     {
+        if (player == null)
+            return;
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
             enemy.state = Enemy.State.Attacking;

@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -34,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
             isAttacking = true;
             currentAttackTime = attackDuration;
             player.animator.SetTrigger("Attack");
+            SoundManager.PlaySound(SoundManager.Sound.NormalAttack);
         }
     }
 }

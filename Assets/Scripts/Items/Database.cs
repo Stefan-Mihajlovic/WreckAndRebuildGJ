@@ -20,6 +20,9 @@ public class Database : MonoBehaviour
     [SerializeField]
     public List<TMP_Text> taskTextsUI;
 
+    [SerializeField]
+    public SoundAudioClip[] soundAudioClipArray;
+
     private static Database instance;
 
     private void Awake()
@@ -107,5 +110,16 @@ public class Database : MonoBehaviour
     public static List<TMP_Text> getTaskUI()
     {
         return instance.taskTextsUI;
+    }
+    public static SoundAudioClip[] getSoundAudioClipArray()
+    {
+        return instance.soundAudioClipArray;
+    }
+
+    [System.Serializable]
+    public class SoundAudioClip
+    {
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
     }
 }

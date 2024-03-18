@@ -9,7 +9,13 @@ public class LevelGenerator : MonoBehaviour
     private Tilemap floorTilemap, boundsTilemap;
     public TileBase floorTile;
     public TileBase wallTile;
-    public GameObject[] items;
+    public List<GameObject> itemsToSpawn;
+    public List<GameObject> taskItemsToSpawn;
+    public List<GameObject> enemiesToSpawn;
+    private List<TaskItem> currentTasks;
+
+    [SerializeField]
+    private Transform player;
 
     public int minWidth = 5;
     public int maxWidth = 10;
@@ -21,6 +27,11 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
+        currentTasks = Database.GetCurrentTasks();
+        foreach (TaskItem taskItem in currentTasks)
+        {
+            taskItemsToSpawn.Add(taskItem.taskItemPrefab);
+        }
         GenerateRoom();
     }
 
@@ -31,6 +42,8 @@ public class LevelGenerator : MonoBehaviour
 
         startPosX = -width;
         startPosY = -height;
+
+        player.transform.position = new Vector3(startPosX + 3, startPosY + 3, 0);
 
         // Generate floor tiles
         for (int x = startPosX; x < width; x++)
@@ -54,11 +67,30 @@ public class LevelGenerator : MonoBehaviour
         }
 
         // Place items randomly
-        foreach (GameObject item in items)
+        foreach (GameObject item in taskItemsToSpawn)
         {
-            int randX = Random.Range(startPosX + 1, width - 1);
-            int randY = Random.Range(startPosY + 1, height - 1);
-            Instantiate(item, new Vector3(randX, randY, 0), Quaternion.identity);
+                int randX = Random.Range(startPosX + 2, width - 2);
+                int randY = Random.Range(startPosY + 2, height - 2);
+                Instantiate(item, new Vector3(randX, randY, 0), Quaternion.identity);
+        }
+        foreach (GameObject item in itemsToSpawn)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                int randX = Random.Range(startPosX + 2, width - 2);
+                int randY = Random.Range(startPosY + 2, height - 2);
+                Instantiate(item, new Vector3(randX, randY, 0), Quaternion.identity);
+            }
+        }
+        foreach (GameObject item in enemiesToSpawn)
+        {
+            int randomNumberOfEnemies = Random.Range(1, 10);
+            for (int i = 0; i < randomNumberOfEnemies; i++)
+            {
+                int randX = Random.Range(startPosX + 2, width - 2);
+                int randY = Random.Range(startPosY + 2, height - 2);
+                Instantiate(item, new Vector3(randX, randY, 0), Quaternion.identity);
+            }
         }
     }
 }
