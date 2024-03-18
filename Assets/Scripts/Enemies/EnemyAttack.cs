@@ -43,5 +43,8 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    virtual protected void Attack() { }
+    virtual protected void Attack() 
+    {
+
+    }
 }

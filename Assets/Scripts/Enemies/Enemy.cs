@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public Vector3 currentGoal;
     private PlayerSensor playerSensor;
     private EnemyAttack enemyAttack;
+    public Animator animator;
 
     public enum State 
     {
@@ -41,6 +42,10 @@ public class Enemy : MonoBehaviour
         //{
         //    TakeDamage(20);
         //}
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
     private void FixedUpdate()
     {
@@ -95,4 +100,10 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawSphere(currentGoal,0.3f);
     }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
 }
+

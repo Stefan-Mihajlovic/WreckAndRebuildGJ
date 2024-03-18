@@ -8,4 +8,6 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: MetalPipe
   m_Controller: {fileID: 9100000, guid: f81e29f4bde4a884fb7576422c239155, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 33decab3e1bfe6f4c83b497bf779827b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3385be8db3c8a804c87f8aaca3350ed1, type: 2}
