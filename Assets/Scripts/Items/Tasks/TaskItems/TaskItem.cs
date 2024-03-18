@@ -7,5 +7,6 @@ public class TaskItem : ScriptableObject
 {
     public string taskItemName;
     public string taskItemDescription;
+    public bool isCompleted;
     public GameObject taskItemPrefab;
 }

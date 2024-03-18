@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Task Database", menuName = "Assets/NewTaskDatabase")]
 public class TaskDatabase : ScriptableObject
 {
-    public List<Task> allTasks;
+    public List<TaskItem> allTasks;
 }

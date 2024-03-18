@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class Database : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class Database : MonoBehaviour
     private List<WeaponItem> headItems;
 
     public TaskDatabase tasks;
-    public List<Task> currentTasks;
+    public List<TaskItem> currentTasks;
 
     [SerializeField]
     public List<TMP_Text> taskTextsUI;
@@ -67,8 +68,8 @@ public class Database : MonoBehaviour
         {
             var task = GetRandomTask(randNumbers[i]);
             currentTasks.Add(task);
-            taskTextsUI[i].text = task.taskDescription;
-            taskTextsUI[i].GetComponentInChildren<Image>().sprite = task.taskItemToCollect.taskItemPrefab.GetComponent<SpriteRenderer>().sprite;
+            taskTextsUI[i].text = task.taskItemDescription;
+            taskTextsUI[i].GetComponentInChildren<Image>().sprite = task.taskItemPrefab.gameObject.GetComponent<SpriteRenderer>().sprite;
         }
     }
     public static WeaponItem GetItemByID(string itemID)
@@ -95,11 +96,11 @@ public class Database : MonoBehaviour
         return instance.headItems[Random.Range(0, instance.headItems.Count)];
     }
 
-    public static Task GetRandomTask(int randomID)
+    public static TaskItem GetRandomTask(int randomID)
     {
         return instance.tasks.allTasks[randomID];
     }
-    public static List<Task> GetCurrentTasks()
+    public static List<TaskItem> GetCurrentTasks()
     {
         return instance.currentTasks;
     }

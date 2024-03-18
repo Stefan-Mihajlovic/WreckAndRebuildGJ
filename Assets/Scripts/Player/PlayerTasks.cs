@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class PlayerTasks : MonoBehaviour
 {
-    private List<Task> currentTasks = new List<Task>();
+    private List<TaskItem> currentTasks = new List<TaskItem>();
     [SerializeField]
     private Sprite checkSprite;
 
     private void Start()
     {
         currentTasks = Database.GetCurrentTasks();
+        foreach (var task in currentTasks)
+        {
+            task.isCompleted = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,10 +25,10 @@ public class PlayerTasks : MonoBehaviour
             string taskToRemoveDesc = "";
             foreach (var task in currentTasks)
             {
-                if (task.taskItemToCollect.taskItemPrefab.name == collision.gameObject.name)
+                if ((task.taskItemPrefab.name + "(Clone)") == collision.gameObject.name)
                 {
                     task.isCompleted = true;
-                    taskToRemoveDesc = task.taskDescription;
+                    taskToRemoveDesc = task.taskItemDescription;
                     Destroy(collision.gameObject);
                 }
             }
@@ -44,7 +48,11 @@ public class PlayerTasks : MonoBehaviour
             }
             if(br > 2)
             {
-                Debug.Log("You collected everything, you filthy fuck");
+                foreach (var task in currentTasks)
+                {
+                    task.isCompleted = false;
+                }
+                Debug.Log("You collected everything, you filthy fuck " + br);
             }
         }
     }
