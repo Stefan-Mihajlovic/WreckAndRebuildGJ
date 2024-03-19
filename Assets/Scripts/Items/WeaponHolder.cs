@@ -14,7 +14,6 @@ public class WeaponHolder : MonoBehaviour
     private void Start()
     {
         baseWeapon = Database.GetRandomBaseItem();
-        headWeapon = Database.GetRandomHeadItem();
         baseHolder = transform.GetChild(0);
         headHolder = baseHolder.GetChild(0);
         weaponImages.UpdateImages();

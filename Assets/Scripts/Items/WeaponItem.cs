@@ -14,5 +14,4 @@ public class WeaponItem : ScriptableObject
     public bool isBase;
     public Sprite sprite;
     public RuntimeAnimatorController animator;
-    public Animation animation;
 }

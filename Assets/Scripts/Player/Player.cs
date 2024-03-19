@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
 
     public Animator animator;
+    public Animator spriteAnimator;
     public PlayerAttack playerAttack;
 
     [SerializeField] public WeaponHolder weaponHolder;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         animator = gameObject.GetComponent<Animator>();
+        spriteAnimator = transform.Find("Gfx").GetComponent<Animator>();
         playerAttack = GetComponent<PlayerAttack>();
     }
 

@@ -38,10 +38,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyUp(KeyCode.Space))
-        //{
-        //    TakeDamage(20);
-        //}
         if (currentHealth <= 0)
         {
             Die();

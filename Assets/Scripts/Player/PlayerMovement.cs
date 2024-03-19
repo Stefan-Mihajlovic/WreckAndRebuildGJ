@@ -30,11 +30,11 @@ public class PlayerMovement : MonoBehaviour
         }
         if (moveHorizontal + moveVertical != 0)
         {
-            player.animator.SetBool("Running", true);
+            player.spriteAnimator.SetBool("Running", true);
         }
         else
         {
-            player.animator.SetBool("Running", false);
+            player.spriteAnimator.SetBool("Running", false);
         }
     }
 
