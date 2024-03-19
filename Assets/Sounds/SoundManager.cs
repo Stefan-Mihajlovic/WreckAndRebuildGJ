@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class SoundManager
@@ -28,6 +29,8 @@ public static class SoundManager
     {
         GameObject soundGO = new GameObject("Sound");
         AudioSource audioSource = soundGO.AddComponent<AudioSource>();
+        audioSource.AddComponent<SoundDestroyer>();
+        audioSource.GetComponent<SoundDestroyer>().timeToDestroy = GetAudioClip(sound).length;
         audioSource.PlayOneShot(GetAudioClip(sound));
     }
 
