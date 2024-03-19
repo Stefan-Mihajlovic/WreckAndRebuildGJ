@@ -36,6 +36,7 @@ public class PlayerSensor : MonoBehaviour
             Debug.DrawRay(transform.position, player.transform.position - transform.position);
             if (Vector2.Distance(transform.position, player.position) <= playerDetectionRadius && ray.collider.CompareTag("Player"))
             {
+                MusicController.playFightMusic();
                 enemy.currentGoal = player.position;
                 enemy.state = Enemy.State.Chasing;
             }
@@ -44,6 +45,7 @@ public class PlayerSensor : MonoBehaviour
                 reachedGoal = Vector2.Distance(transform.position, enemy.currentGoal) <= reachedGoalDistance;
                 if (reachedGoal)
                 {
+                    MusicController.stopFightMusic();
                     enemy.state = Enemy.State.Idle;
                 }
             }

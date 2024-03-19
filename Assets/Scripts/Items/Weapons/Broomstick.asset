@@ -18,5 +18,5 @@ MonoBehaviour:
   damage: 30
   isStandalone: 0
   isBase: 1
-  sprite: {fileID: 21300000, guid: 3cb3a2f5bec65b841ad314f324201926, type: 3}
+  sprite: {fileID: -1259517605, guid: feeb44386affce04f9a6dec4e1a93a1f, type: 3}
   animator: {fileID: 22100000, guid: 6212e8097d84372498dc1b9c02104efb, type: 2}
