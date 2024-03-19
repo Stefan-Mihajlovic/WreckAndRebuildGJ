@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+        
     }
     private void FixedUpdate()
     {
@@ -102,7 +103,8 @@ public class Enemy : MonoBehaviour
         Debug.Log("jedi gobna");
         spriteAnimator.SetBool("Running", false);
         rb.velocity = new Vector3(0,0,0);
-        enemyAttack.AttackOrCooldown();
+        enemyAttack.attackIndicatore();
+        
     }
 
     private void OnDrawGizmos()

@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyAttack : MonoBehaviour
 {
     private Enemy enemy;
     [SerializeField] private float cooldown;
-    private float currentCooldown;
+    public float currentCooldown;
     private bool isAttacking = false;
     public float attackDuration;
     private float currentAttackTime;
+    public GameObject attackIndicator;
+    private bool isDone = false;
+
+
 
     private void Start()
     {
@@ -17,6 +22,7 @@ public class EnemyAttack : MonoBehaviour
         enemy = GetComponent<Enemy>();
         enemy.enemyAttack.attackDuration = 5f / (enemy.weaponHolder.baseWeapon.speed + enemy.weaponHolder.headWeapon.speed);
     }
+    
     private void Update()
     {
         if (isAttacking) 
@@ -32,21 +38,35 @@ public class EnemyAttack : MonoBehaviour
             isAttacking = false;
             currentCooldown += currentAttackTime;
         }
+}
+
+    public void attackIndicatore()
+    {
+        if (!isDone && currentCooldown < 0)
+        {
+            Instantiate(attackIndicator, transform.position, transform.rotation);
+            Invoke("AttackOrCooldown", 1f);
+            isDone = true;
+        }
     }
     public void AttackOrCooldown()
     {
         Debug.Log("saftaj jaja");
         if (currentCooldown <= 0 && !isAttacking)
         {
+            
             Debug.Log("samo jaja");
             currentCooldown = cooldown;
             currentAttackTime = attackDuration;
             Attack();
+            isDone = false;
         }
+      
     }
 
     virtual protected void Attack() 
     {
+        
         if (!isAttacking)
         {
             isAttacking = true;
@@ -54,6 +74,8 @@ public class EnemyAttack : MonoBehaviour
             enemy.animator.SetTrigger("Attack");
             Debug.Log("aaaa");
             SoundManager.PlaySound(SoundManager.Sound.NormalAttack);
+           
         }
     }
+
 }
