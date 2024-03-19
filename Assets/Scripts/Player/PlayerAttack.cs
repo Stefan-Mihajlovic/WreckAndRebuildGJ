@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     private void Start()
     {
         player = GetComponent<Player>();
+        player.playerAttack.attackDuration = 5f / (player.weaponHolder.baseWeapon.speed + player.weaponHolder.headWeapon.speed);
     }
 
     private void Update()

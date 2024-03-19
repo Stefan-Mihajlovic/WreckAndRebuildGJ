@@ -8,13 +8,14 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private float cooldown;
     private float currentCooldown;
     private bool isAttacking = false;
-    [SerializeField] private float attackDuration;
+    public float attackDuration;
     private float currentAttackTime;
 
     private void Start()
     {
         currentCooldown = cooldown;
         enemy = GetComponent<Enemy>();
+        enemy.enemyAttack.attackDuration = 5f / (enemy.weaponHolder.baseWeapon.speed + enemy.weaponHolder.headWeapon.speed);
     }
     private void Update()
     {
@@ -34,10 +35,11 @@ public class EnemyAttack : MonoBehaviour
     }
     public void AttackOrCooldown()
     {
+        Debug.Log("saftaj jaja");
         if (currentCooldown <= 0 && !isAttacking)
         {
+            Debug.Log("samo jaja");
             currentCooldown = cooldown;
-            isAttacking = true;
             currentAttackTime = attackDuration;
             Attack();
         }
@@ -45,6 +47,13 @@ public class EnemyAttack : MonoBehaviour
 
     virtual protected void Attack() 
     {
-
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            currentAttackTime = attackDuration;
+            enemy.animator.SetTrigger("Attack");
+            Debug.Log("aaaa");
+            SoundManager.PlaySound(SoundManager.Sound.NormalAttack);
+        }
     }
 }

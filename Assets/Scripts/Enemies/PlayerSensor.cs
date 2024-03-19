@@ -28,6 +28,7 @@ public class PlayerSensor : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
             enemy.state = Enemy.State.Attacking;
+            Debug.Log("jebi se");
         }
         else
         {

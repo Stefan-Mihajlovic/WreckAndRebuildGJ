@@ -10,12 +10,15 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private float movementSpeed;
+    [SerializeField] public WeaponHolder weaponHolder;
     private Transform player;
     private Rigidbody2D rb;
     public Vector3 currentGoal;
     private PlayerSensor playerSensor;
-    private EnemyAttack enemyAttack;
+    public EnemyAttack enemyAttack;
     public Animator animator;
+    public Animator spriteAnimator;
+    private bool isFacingRight = true;
 
     public enum State 
     {
@@ -35,7 +38,6 @@ public class Enemy : MonoBehaviour
         currentGoal = transform.position;
         enemyAttack = GetComponent<EnemyAttack>();
     }
-
     private void Update()
     {
         if (currentHealth <= 0)
@@ -70,6 +72,7 @@ public class Enemy : MonoBehaviour
         {
             case State.Idle:
                 rb.velocity = new Vector3(0, 0, 0);
+                spriteAnimator.SetBool("Running", false);
                 break;
             case State.Chasing:
                 Chase();
@@ -84,9 +87,20 @@ public class Enemy : MonoBehaviour
     {
         Vector2 distance = (currentGoal - transform.position).normalized;
         rb.velocity = distance * movementSpeed;
+        if (isFacingRight && rb.velocity.x < 0f || !isFacingRight && rb.velocity.x > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1;
+            transform.localScale = localScale;
+        }
+        spriteAnimator.SetBool("Running", true);
+
     }
     private void Attack()
     {
+        Debug.Log("jedi gobna");
+        spriteAnimator.SetBool("Running", false);
         rb.velocity = new Vector3(0,0,0);
         enemyAttack.AttackOrCooldown();
     }
@@ -96,7 +110,6 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawSphere(currentGoal,0.3f);
     }
-
     private void Die()
     {
         Destroy(gameObject);

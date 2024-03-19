@@ -26,10 +26,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             playerAttack.Attack();
