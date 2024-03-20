@@ -93,8 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorTilemap: {fileID: 0}
   boundsTilemap: {fileID: 0}
-  floorTile: {fileID: 11400000, guid: 3b8b6b106ddad144fbd474a010b68599, type: 2}
-  wallTile: {fileID: 11400000, guid: 721e1347900d0604f9430ec4a96800d9, type: 2}
+  floorTile: {fileID: 11400000, guid: a875dddfca93fbd4a87fe117a3829472, type: 2}
+  wallTile: {fileID: 11400000, guid: 3df4f81df0f103f48b6fca222009c0e2, type: 2}
   itemsToSpawn:
   - {fileID: 4798375550015460476, guid: 3c3f1882c88ffa34bb1b589c5b1cc479, type: 3}
   - {fileID: 350420685853916615, guid: 8e18468e4d303244b939d3c4488e4068, type: 3}
@@ -102,6 +102,7 @@ MonoBehaviour:
   - {fileID: 5063980816123498646, guid: 0757a988ef0b0094da4672399f838dd2, type: 3}
   - {fileID: 4337174841753714957, guid: 726139cf18d1a2048bbb7d62b07cd8c3, type: 3}
   - {fileID: 960874943826944350, guid: f96ff90c42cfa8346ae67c5381e88c6f, type: 3}
+  - {fileID: 4337174841753714957, guid: c315eee3163712b4692f863ac5b19f0f, type: 3}
   taskItemsToSpawn: []
   enemiesToSpawn:
   - {fileID: 2697691790243336082, guid: 13c06a2dc4ad5c649b1d090ade49bade, type: 3}

@@ -7,6 +7,22 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
+    private Transform planet;
+    private float newRotation = 0;
+    [SerializeField]
+    public int rotationSpeed = 10;
+
+    private void Start()
+    {
+        planet = transform.Find("World");
+    }
+
+    private void Update()
+    {
+        newRotation += Time.deltaTime * rotationSpeed;
+        planet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, newRotation));
+    }
+
     public void sledecaScena()
     {
         Invoke("play", 1);

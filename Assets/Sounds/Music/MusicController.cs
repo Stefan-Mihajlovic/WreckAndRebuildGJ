@@ -70,7 +70,6 @@ public class MusicController : MonoBehaviour
 
     public static void playFightMusic()
     {
-        Debug.Log(instance);
         if (!instance.GetIsFightMusicPlaying())
         {
             instance.setFightMusic();

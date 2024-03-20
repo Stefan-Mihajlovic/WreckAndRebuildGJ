@@ -53,23 +53,10 @@ public class Database : MonoBehaviour
             }
         }
 
-        List<int> randNumbers = new List<int>();
-        for (int i = 0; i < taskTextsUI.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
-            while (true)
-            {
-                int rand = Random.Range(0, taskTextsUI.Count);
-                if (!randNumbers.Contains(rand))
-                {
-                    randNumbers.Add(rand);
-                    break;
-                }
-            }
-        }
-
-        for (int i = 0; i < taskTextsUI.Count; i++)
-        {
-            var task = GetRandomTask(randNumbers[i]);
+            var task = GetRandomTask(Random.Range(0,2));
+            Debug.Log(task.taskItemName);
             currentTasks.Add(task);
             taskTextsUI[i].text = task.taskItemDescription;
             taskTextsUI[i].GetComponentInChildren<Image>().sprite = task.taskItemPrefab.gameObject.GetComponent<SpriteRenderer>().sprite;

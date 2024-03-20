@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 336ba212a43336c41b18937fab50a446, type: 3}
-  m_Name: TaskItem_Unity
+  m_Name: TaskItem_StealBeams
   m_EditorClassIdentifier: 
-  taskItemID: 2
-  taskItemName: Unity object
-  taskItemDescription: Unity item that brings peace
+  taskItemName: Steal Beams
+  taskItemDescription: Get some steal beams
+  isCompleted: 1
   taskItemPrefab: {fileID: 2590122390225761068, guid: e858f69f21edf2d4ca48d01ddff6bd42, type: 3}
