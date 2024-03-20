@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 336ba212a43336c41b18937fab50a446, type: 3}
-  m_Name: TaskItem_SprucePlanks
+  m_Name: TaskItem_Copper
   m_EditorClassIdentifier: 
-  taskItemName: Spruce Planks
-  taskItemDescription: Gather some spruce planks
-  isCompleted: 0
-  taskItemPrefab: {fileID: 2590122390225761068, guid: fd4d1eadee747594eb1641a8583bbf37, type: 3}
+  taskItemName: Copper
+  taskItemDescription: Gather some copper
+  isCompleted: 1
+  taskItemPrefab: {fileID: 2590122390225761068, guid: f3a1464191088c84ea9fdc6ca7fa02af, type: 3}
