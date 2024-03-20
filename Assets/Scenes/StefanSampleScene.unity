@@ -628,6 +628,7 @@ MonoBehaviour:
   taskItemsToSpawn: []
   enemiesToSpawn:
   - {fileID: 2697691790243336082, guid: 13c06a2dc4ad5c649b1d090ade49bade, type: 3}
+  weaponItem: {fileID: 0}
   player: {fileID: 1469038866}
   minWidth: 10
   maxWidth: 20
@@ -746,6 +747,10 @@ PrefabInstance:
     - target: {fileID: 1410083376823158733, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410083377935970236, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.800018
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
