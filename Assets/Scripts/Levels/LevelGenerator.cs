@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static UnityEditor.Progress;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class LevelGenerator : MonoBehaviour
     public List<GameObject> taskItemsToSpawn;
     public List<GameObject> enemiesToSpawn;
     private List<TaskItem> currentTasks;
+
+    [SerializeField]
+    private GameObject weaponItem;
 
     [SerializeField]
     private Transform player;
@@ -91,6 +95,13 @@ public class LevelGenerator : MonoBehaviour
                 int randY = Random.Range(startPosY + 2, height - 2);
                 Instantiate(item, new Vector3(randX, randY, 0), Quaternion.identity);
             }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            int randX = Random.Range(startPosX + 2, width - 2);
+            int randY = Random.Range(startPosY + 2, height - 2);
+            Instantiate(weaponItem, new Vector3(randX, randY, 0), Quaternion.identity);
         }
     }
 }

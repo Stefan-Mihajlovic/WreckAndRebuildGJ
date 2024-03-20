@@ -666,6 +666,10 @@ PrefabInstance:
       propertyPath: headWeaponImages.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1410083376314244880, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1410083376314244887, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
       propertyPath: m_margin.z
       value: 52.433907
@@ -809,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 1410083377521983813, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.19996643
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410083377521983813, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.1000214
       objectReference: {fileID: 0}
     - target: {fileID: 1410083377908170684, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
       propertyPath: m_margin.z
@@ -1084,6 +1092,10 @@ PrefabInstance:
       propertyPath: floorTile
       value: 
       objectReference: {fileID: 11400000, guid: a098d08519230214198f60c90d2525f7, type: 2}
+    - target: {fileID: 6585060979757583313, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: weaponItem
+      value: 
+      objectReference: {fileID: 5325975329275900602, guid: 2820c88bd4f2ac5439cb04623c547c43, type: 3}
     - target: {fileID: 6585060979757583313, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
       propertyPath: floorTilemap
       value: 

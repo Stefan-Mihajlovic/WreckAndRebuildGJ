@@ -19,6 +19,9 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public Animator spriteAnimator;
     private bool isFacingRight = true;
+    private bool isEnemyDeathOn = false;
+    private float newRotation = 0;
+    public int RandomX, RandomY;
 
     public enum State 
     {
@@ -39,14 +42,24 @@ public class Enemy : MonoBehaviour
         enemyAttack = GetComponent<EnemyAttack>();
         animator.runtimeAnimatorController = weaponHolder.baseWeapon.animator;
         Debug.Log(weaponHolder.baseWeapon);
+        RandomX = UnityEngine.Random.Range(10, 20);
+        RandomY = UnityEngine.Random.Range(10, 20);
     }
     private void Update()
     {
+        newRotation += Time.deltaTime * 50;
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
-        
+        if (isEnemyDeathOn)
+        {
+            this.GetComponent<BoxCollider2D>().enabled = false;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, newRotation));
+            transform.position += new Vector3(RandomX * Time.deltaTime, RandomY * Time.deltaTime, 0);
+            transform.localScale += new Vector3(RandomX/5 * Time.deltaTime, RandomY/5 * Time.deltaTime, 0);
+        }
+
     }
     private void FixedUpdate()
     {
@@ -113,8 +126,11 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawSphere(currentGoal,0.3f);
     }
-    private void Die()
+    private IEnumerator Die()
     {
+        Debug.Log("da");
+        isEnemyDeathOn = true;
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 }
