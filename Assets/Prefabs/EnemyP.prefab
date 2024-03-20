@@ -433,7 +433,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -866629308, guid: e75a6da1787e5e24682eaf1a2dc44110, type: 3}
+  m_Sprite: {fileID: -3218825, guid: e75a6da1787e5e24682eaf1a2dc44110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -454,7 +454,7 @@ Animator:
   m_GameObject: {fileID: 2697691788787668825}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: cbb5fa416941d3b44a89211f5bd6e394, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5e605260b40a8a41abad1922a7ca95c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 5861065865035396204}
   - component: {fileID: 961040487671748757}
   - component: {fileID: 6381117812458311653}
+  - component: {fileID: 3314496143129128612}
   m_Layer: 10
   m_Name: EnemyP
   m_TagString: Enemy
@@ -594,6 +595,8 @@ MonoBehaviour:
   enemyAttack: {fileID: 0}
   animator: {fileID: 579545850208959299}
   spriteAnimator: {fileID: 1433785358}
+  RandomX: 0
+  RandomY: 0
   state: 0
 --- !u!114 &5861065865035396204
 MonoBehaviour:
@@ -650,6 +653,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.72965324, y: 1.593261}
   m_EdgeRadius: 0
+--- !u!210 &3314496143129128612
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697691790243336082}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &6522278502188179262
 GameObject:
   m_ObjectHideFlags: 0

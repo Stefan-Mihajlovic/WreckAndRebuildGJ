@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc75f99f15e0c5946be9b60ee90b63e5, type: 3}
   m_Name: Chain
   m_EditorClassIdentifier: 
-  itemID: wrench
-  itemName: Wrench
-  speed: 4
+  itemID: chain
+  itemName: Chain
+  speed: 5
   damage: 25
   isStandalone: 0
   isBase: 1
   sprite: {fileID: 2035292415, guid: feeb44386affce04f9a6dec4e1a93a1f, type: 3}
-  animator: {fileID: 22100000, guid: 8366be3ddedcae041a1415be4a9e7a2e, type: 2}
+  animator: {fileID: 22100000, guid: 631f0bd01856b574982a0b57cd2af8f4, type: 2}
