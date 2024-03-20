@@ -16,6 +16,5 @@ public class EnemyAttackCollisions : MonoBehaviour
         {
             collision.GetComponent<Player>().TakeDamage(enemy.weaponHolder.baseWeapon.damage + enemy.weaponHolder.headWeapon.damage);
         }
-        Debug.Log("tinuninu enemi");
     }
 }

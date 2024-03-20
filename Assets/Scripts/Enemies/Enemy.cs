@@ -37,6 +37,8 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentGoal = transform.position;
         enemyAttack = GetComponent<EnemyAttack>();
+        animator.runtimeAnimatorController = weaponHolder.baseWeapon.animator;
+        Debug.Log(weaponHolder.baseWeapon);
     }
     private void Update()
     {

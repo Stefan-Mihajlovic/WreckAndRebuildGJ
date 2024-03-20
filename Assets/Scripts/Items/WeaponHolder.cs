@@ -10,8 +10,7 @@ public class WeaponHolder : MonoBehaviour
     private Transform baseHolder;
     private Transform headHolder;
 
-
-    private void Start()
+    private void Awake()
     {
         baseWeapon = Database.GetRandomBaseItem();
         baseHolder = transform.GetChild(0);

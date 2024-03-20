@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class WeaponImages : MonoBehaviour
 {
-    [SerializeField] private List<Sprite> baseWeaponImages;
-    [SerializeField] private List<Sprite> headWeaponImages;
     [SerializeField] private WeaponHolder weaponHolder;
     private Image baseItem;
     private Image headItem;

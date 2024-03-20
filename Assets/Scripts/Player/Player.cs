@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     public Animator spriteAnimator;
     public PlayerAttack playerAttack;
 
-    [SerializeField] public WeaponHolder weaponHolder;
+    [SerializeField] private GameObject boom;
+     public WeaponHolder weaponHolder;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         spriteAnimator = transform.Find("Gfx").GetComponent<Animator>();
         playerAttack = GetComponent<PlayerAttack>();
+        animator.runtimeAnimatorController = weaponHolder.baseWeapon.animator;
     }
 
     private void Update()
@@ -29,6 +31,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             playerAttack.Attack();
+        }
+        if(currentHealth<=0)
+        {
+            boom.SetActive(true);
         }
     }
 

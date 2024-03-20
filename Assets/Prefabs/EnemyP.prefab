@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 1177017699386576624}
   - component: {fileID: 5861065865035396204}
   - component: {fileID: 961040487671748757}
+  - component: {fileID: 6381117812458311653}
   m_Layer: 10
   m_Name: EnemyP
   m_TagString: Enemy
@@ -623,6 +624,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+--- !u!61 &6381117812458311653
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697691790243336082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000014901161, y: 0.5519577}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.72965324, y: 1.593261}
+  m_EdgeRadius: 0
 --- !u!1 &6522278502188179262
 GameObject:
   m_ObjectHideFlags: 0

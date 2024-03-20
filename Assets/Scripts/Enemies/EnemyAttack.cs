@@ -69,7 +69,6 @@ public class EnemyAttack : MonoBehaviour
             isAttacking = true;
             currentAttackTime = attackDuration;
             enemy.animator.SetTrigger("Attack");
-            Debug.Log("aaaa");
             SoundManager.PlaySound(SoundManager.Sound.NormalAttack);
            
         }
