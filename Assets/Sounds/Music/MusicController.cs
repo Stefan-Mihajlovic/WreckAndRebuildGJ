@@ -70,7 +70,8 @@ public class MusicController : MonoBehaviour
 
     public static void playFightMusic()
     {
-        if (!instance.isFightMusicPlaying)
+        Debug.Log(instance);
+        if (!instance.GetIsFightMusicPlaying())
         {
             instance.setFightMusic();
         }
@@ -79,9 +80,14 @@ public class MusicController : MonoBehaviour
     public static IEnumerator stopFightMusic()
     {
         yield return new WaitForSeconds(2f);
-        if (instance.isFightMusicPlaying)
+        if (instance.GetIsFightMusicPlaying())
         {
             instance.setCalmLocationMusic();
         }
+    }
+
+    private bool GetIsFightMusicPlaying()
+    {
+        return instance.isFightMusicPlaying;
     }
 }

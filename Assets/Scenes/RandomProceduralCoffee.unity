@@ -523,116 +523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104a61bdf214e1d45a55f191cb157dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2091937145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2091937147}
-  - component: {fileID: 2091937146}
-  - component: {fileID: 2091937148}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2091937146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091937145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ba4cd089956c04b83fe97e6a5cadba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: {fileID: 11400000, guid: 7a4044dc57fc893418dd1a178650a8ff, type: 2}
-  tasks: {fileID: 11400000, guid: e1e69f12ef0cce64a9845896bef45767, type: 2}
-  currentTasks: []
-  taskTextsUI:
-  - {fileID: 2113472332}
-  - {fileID: 100423967}
-  - {fileID: 452716519}
-  soundAudioClipArray:
-  - sound: 0
-    audioClip: {fileID: 8300000, guid: 4ec2cb59d22a3dc42aaf4a1a981df847, type: 3}
-  - sound: 2
-    audioClip: {fileID: 8300000, guid: 2e91337fcc0cdcd458663452a533e717, type: 3}
-  - sound: 3
-    audioClip: {fileID: 8300000, guid: 1e50b52c1236ad5458230ea90e777623, type: 3}
-  - sound: 4
-    audioClip: {fileID: 8300000, guid: 3e8dc1750e7cf214d93160ce769f2614, type: 3}
-  - sound: 5
-    audioClip: {fileID: 8300000, guid: 7dcdd2cc8d70a1941bf4261c575e8f32, type: 3}
-  - sound: 6
-    audioClip: {fileID: 8300000, guid: 95d2a29c18842144da848ebc49b58097, type: 3}
-  - sound: 7
-    audioClip: {fileID: 8300000, guid: 136f45918888e2a45866f3d6126f7564, type: 3}
-  - sound: 8
-    audioClip: {fileID: 8300000, guid: a1c11ac176e29e449953fa1d63b3f7a0, type: 3}
-  - sound: 9
-    audioClip: {fileID: 8300000, guid: 38394a04e790818468e4cafcceed7389, type: 3}
-  - sound: 10
-    audioClip: {fileID: 8300000, guid: d82de20a3772ccf468c485f58c93832e, type: 3}
-  - sound: 11
-    audioClip: {fileID: 8300000, guid: 9b96c6341d0245147935c9769f403a15, type: 3}
-  - sound: 12
-    audioClip: {fileID: 8300000, guid: 086619588ca4d6f49a7976e53d3ed565, type: 3}
-  - sound: 15
-    audioClip: {fileID: 8300000, guid: fd27d419b8639c94cb60ac5a2713e349, type: 3}
---- !u!4 &2091937147
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091937145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2091937148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091937145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa277a950d9c1d48b6330c5182feddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floorTilemap: {fileID: 106539106}
-  boundsTilemap: {fileID: 143523113}
-  floorTile: {fileID: 11400000, guid: 3b8b6b106ddad144fbd474a010b68599, type: 2}
-  wallTile: {fileID: 11400000, guid: 721e1347900d0604f9430ec4a96800d9, type: 2}
-  itemsToSpawn:
-  - {fileID: 4798375550015460476, guid: 3c3f1882c88ffa34bb1b589c5b1cc479, type: 3}
-  - {fileID: 350420685853916615, guid: 8e18468e4d303244b939d3c4488e4068, type: 3}
-  - {fileID: 1917811610540589539, guid: 8cfd15f99fb4ba943a2d82c71e4777a3, type: 3}
-  - {fileID: 5063980816123498646, guid: 0757a988ef0b0094da4672399f838dd2, type: 3}
-  - {fileID: 4337174841753714957, guid: 726139cf18d1a2048bbb7d62b07cd8c3, type: 3}
-  - {fileID: 960874943826944350, guid: f96ff90c42cfa8346ae67c5381e88c6f, type: 3}
-  taskItemsToSpawn: []
-  enemiesToSpawn:
-  - {fileID: 2697691790243336082, guid: 13c06a2dc4ad5c649b1d090ade49bade, type: 3}
-  player: {fileID: 1469038866}
-  minWidth: 10
-  maxWidth: 20
-  minHeight: 10
-  maxHeight: 20
 --- !u!114 &2113472332 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1410083376314244887, guid: 810aa0c0a3ca4bc44aeeb4ceb29adb7c, type: 3}
@@ -818,6 +708,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d486f2a97e7598d4ba56f850b301b084, type: 3}
+--- !u!1001 &6585060978336786093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6585060979757583313, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1469038866}
+    - target: {fileID: 6585060979757583313, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: floorTilemap
+      value: 
+      objectReference: {fileID: 106539106}
+    - target: {fileID: 6585060979757583313, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: boundsTilemap
+      value: 
+      objectReference: {fileID: 143523113}
+    - target: {fileID: 6585060979757583316, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583318, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585060979757583319, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: taskTextsUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 2113472332}
+    - target: {fileID: 6585060979757583319, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: taskTextsUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 100423967}
+    - target: {fileID: 6585060979757583319, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
+      propertyPath: taskTextsUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 452716519}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3bb088e6060af0f4289db31fd5cb7e8e, type: 3}
 --- !u!1001 &7929775272847615327
 PrefabInstance:
   m_ObjectHideFlags: 0
