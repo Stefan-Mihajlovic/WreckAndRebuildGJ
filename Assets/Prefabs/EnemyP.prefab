@@ -607,7 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+  currentCooldown: 0
   attackDuration: 1
+  attackIndicator: {fileID: 7055837736718905124, guid: 1b2a5545a5ed98c4eaef10b912002185, type: 3}
 --- !u!114 &961040487671748757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +705,7 @@ SpriteRenderer:
   m_Size: {x: 0.8, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6551248835041138249

@@ -51,11 +51,8 @@ public class EnemyAttack : MonoBehaviour
     }
     public void AttackOrCooldown()
     {
-        Debug.Log("saftaj jaja");
         if (currentCooldown <= 0 && !isAttacking)
         {
-            
-            Debug.Log("samo jaja");
             currentCooldown = cooldown;
             currentAttackTime = attackDuration;
             Attack();

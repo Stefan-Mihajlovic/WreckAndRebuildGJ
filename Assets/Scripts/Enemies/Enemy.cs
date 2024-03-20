@@ -100,7 +100,6 @@ public class Enemy : MonoBehaviour
     }
     private void Attack()
     {
-        Debug.Log("jedi gobna");
         spriteAnimator.SetBool("Running", false);
         rb.velocity = new Vector3(0,0,0);
         enemyAttack.attackIndicatore();
